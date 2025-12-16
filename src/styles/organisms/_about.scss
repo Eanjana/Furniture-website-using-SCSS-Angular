@@ -1,0 +1,43 @@
+.about{
+    padding: 2rem 0;
+    box-sizing: border-box;
+
+    &__head{
+        text-align: center;
+    
+        h2{
+            color: $weak-black;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 50px;
+        }
+        p{
+            color: $weak-color-para;
+            font-size: 15px;
+            margin-bottom: 3rem;
+        }
+    }
+    &__cards{
+        display: grid;
+        grid-template-columns: 381px 381px 381px;
+        justify-content: center;
+        gap: 1rem;
+    }
+    &__card {
+        text-align: center;
+        @include hover-lift;
+
+        img {
+            height:480px;
+            width:381px;
+        }
+        p{
+            font-weight: 600;
+            font-size: 20px;
+            color: $weak-black;
+            margin-top: 20px;
+        }
+    }
+
+}
+

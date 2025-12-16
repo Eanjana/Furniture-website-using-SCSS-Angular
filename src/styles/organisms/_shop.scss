@@ -1,0 +1,174 @@
+.shop{
+    background-color: $bg-product;
+    padding: 4rem;
+
+    &__head{
+        color: $product-head;
+        font-weight: 700;
+        font-size: 25px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    &__cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    &__card{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: start;
+        background-color: $bg-product-card;
+        padding-bottom: 12px;
+        position: relative;
+        line-height: 35px;
+        overflow: hidden;
+        @include hover-lift;
+    }
+    &__product-details{
+        padding: 15px;
+    }
+    &__product-name{
+        font-weight: 600;
+        font-size: 20px;
+        color: $product-head;
+    }
+    &__product-type{
+        font-weight: 500;
+        size: 16px;
+        line-height: 150%;
+        color: $weak-color-product;
+    }
+    &__product-newRate{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 150%;
+        color: $product-head;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__product-oldRate{
+        text-decoration: line-through;
+        font-weight: 400;
+        font-size: 16px;
+        color: $cross-rate;
+        line-height: 150%;
+    }
+    &__discount{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: $bg-discount;
+        color: white;
+        width: 48px;
+        height: 48px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: absolute;
+        top: 24px;
+        left: 260px;
+
+        p{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+        }
+    }
+    &__label{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: $bg-new;
+        color: white;
+        width: 48px;
+        height: 48px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: absolute;
+        top: 24px;
+        left: 260px;
+
+        p{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+        }
+    }
+    &__btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+
+        button{
+            width: 245px;
+            height: 48px;
+            border: 1px solid $theme-color-dark;
+            color: $theme-color-dark;
+            background-color: white;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 150%;
+            cursor: pointer;
+            @include hover-lift;
+
+            &:hover{
+                background-color:$theme-color-dark ;
+                color: white;
+            }
+        }
+        
+    }
+
+}
+
+
+//hover
+
+.shop__hover {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(58, 58, 58, 0.8);
+  color: $text-white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $space-md;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+
+  button{
+    width: 202px;
+    height: 48px;
+    background-color: white;
+    color: $theme-color-dark;
+    font-weight: 600;
+    font-size: $space-md;
+    line-height: 150%;
+    border: none;
+  }
+}
+
+.shop__hover-icons{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    span{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 14px;
+        cursor: pointer;
+    }
+}
+
+.shop__card:hover .shop__hover {
+  opacity: 1;
+}

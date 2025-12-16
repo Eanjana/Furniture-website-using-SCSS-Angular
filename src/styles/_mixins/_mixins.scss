@@ -1,0 +1,41 @@
+// Flex helpers
+@mixin flex-center( $justify, $gap) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+// Button base
+@mixin button-base ($font-weight){
+  border: none;
+  cursor: pointer;
+  font-weight: $font-weight;
+  transition: all 0.3s ease;
+}
+
+// Hover lift
+@mixin hover-lift {
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+//hover theme change
+
+@mixin hover-themeChange{
+  &:hover{
+    background-color: $theme-color-light;
+    color: $theme-color-dark;
+    border: 1px solid $theme-color-dark;
+    }
+}
+
+// Responsive
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
