@@ -1,0 +1,85 @@
+//header
+.header{
+  button{
+        @include button-base(700);
+        width: 200px;
+        height: 60px;
+        background-color: $theme-color-dark;
+        color: white;
+        bottom: 0;
+        font-weight: 700;
+        font-size: $space-md;
+        line-height: 100%;
+        @include hover-themeChange;
+        @include hover-lift;
+    }
+}
+
+//shop
+.shop__btn {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+
+  button {
+    width: 245px;
+    height: 48px;
+    border: 1px solid $theme-color-dark;
+    color: $theme-color-dark;
+    background-color: white;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    cursor: pointer;
+    @include hover-lift;
+
+    &:hover {
+      background-color: $theme-color-dark;
+      color: white;
+    }
+  }
+}
+
+
+//product card hover
+
+.shop__hover {
+    button{
+    width: 202px;
+    height: 48px;
+    background-color: white;
+    color: $theme-color-dark;
+    font-weight: 600;
+    font-size: $space-md;
+    line-height: 150%;
+    border: none;
+    @include hover-lift;
+    @include hover-themeChange;
+  }
+}
+
+
+//footer
+
+.footer__links{
+  button{
+        border: none;
+        background-color: white;
+        margin-left: 2rem;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.585);
+        padding: 3px 0;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 100%;
+        cursor: pointer;
+        @include hover-lift;
+
+        &:hover{
+            background-color: $bg-new;
+            color: white;
+            border-bottom: none;
+            padding: 6px;
+        }
+    }
+}

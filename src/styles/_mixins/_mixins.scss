@@ -23,6 +23,15 @@
   }
 }
 
+//hover theme change text
+
+@mixin hover-textColor {
+  &:hover {
+    color: $theme-color-dark;
+  }
+}
+
+
 //hover theme change
 
 @mixin hover-themeChange{

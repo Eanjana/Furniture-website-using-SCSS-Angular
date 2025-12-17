@@ -97,31 +97,6 @@
             line-height: 150%;
         }
     }
-    &__btn{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 50px;
-
-        button{
-            width: 245px;
-            height: 48px;
-            border: 1px solid $theme-color-dark;
-            color: $theme-color-dark;
-            background-color: white;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 150%;
-            cursor: pointer;
-            @include hover-lift;
-
-            &:hover{
-                background-color:$theme-color-dark ;
-                color: white;
-            }
-        }
-        
-    }
 
 }
 
@@ -142,19 +117,6 @@
   opacity: 0;
   transition: opacity 0.3s ease;
   text-align: center;
-
-  button{
-    width: 202px;
-    height: 48px;
-    background-color: white;
-    color: $theme-color-dark;
-    font-weight: 600;
-    font-size: $space-md;
-    line-height: 150%;
-    border: none;
-    @include hover-lift;
-    @include hover-themeChange;
-  }
 }
 
 .shop__hover-icons{
@@ -168,6 +130,8 @@
         gap: 0.5rem;
         font-size: 14px;
         cursor: pointer;
+        @include hover-lift;
+        @include hover-textColor;
     }
 }
 

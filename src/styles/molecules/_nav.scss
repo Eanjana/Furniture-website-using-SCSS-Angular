@@ -1,56 +1,57 @@
-.nav{
-    @include flex-center(space-between,0);
-    padding: 0 3rem;
-    margin: 0;
+.nav {
+  @include flex-center(space-between, 0);
+  padding: 0 3rem;
+  margin: 0;
 
-    &__brand{
-        display: inline-flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
+  &__brand {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 
-    &__image{
-        width: 5.1rem;
-        height: 5rem;
-    }
+  &__image {
+    width: 5.1rem;
+    height: 5rem;
+  }
 
-    &__links, &__icons{
-        display: flex;
-        flex-wrap: wrap;
-    }
+  &__links,
+  &__icons {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-    &__links{
-        gap: 5rem;
-        transition: transform 0.5s ease-in-out;
-    }
-    &__links a{
-        &:hover{
-            color: $theme-color-dark;
-        }
-    }
+  &__links {
+    gap: 5rem;
+    transition: transform 0.5s ease-in-out;
+  }
+  &__links a {
+    @include hover-textColor;
+  }
 
-    &__icons{
-        gap: 2rem;
-    }
+  &__icons {
+    gap: 2rem;
+  }
 
-    &__icons img {
-        width: 20px;
-        top: auto;
-        @include hover-lift;
-    }
+  &__icons img {
+    width: 20px;
+    top: auto;
+    @include hover-lift;
+  }
 
-    a{
-        text-decoration: none;
-        color: $black;
-        font-family: $font-poppins;
-        font-weight: 500;
-    }
+  a {
+    text-decoration: none;
+    color: $black;
+    font-family: $font-poppins;
+    font-weight: 500;
+  }
 
-    p{
-        font-family: $font-mont;
-        font-weight: 700;
-        font-size: 34px;
-    }
+  p {
+    font-family: $font-mont;
+    font-weight: 700;
+    font-size: 34px;
+  }
+  @include mobile {
+    padding: 0rem;
+    @include flex-center(center, 1rem);
+  }
 }
-
-
