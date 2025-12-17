@@ -152,6 +152,8 @@
     font-size: $space-md;
     line-height: 150%;
     border: none;
+    @include hover-lift;
+    @include hover-themeChange;
   }
 }
 
